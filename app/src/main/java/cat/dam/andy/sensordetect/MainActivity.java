@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView tvSensors = (TextView) findViewById(R.id.tv_Sensors);
+        int nSensors=0; //quantitat de sensors
 
         //getSystemService retorna un handler (gestor) d'un servei a nivell de sistema pel seu nom
         //amb getSystemService podem accedir no només als sensors, també al gestor de bateria, vibració, alarma, ....
@@ -37,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         //Utilitzem StringBuilder enlloc de concat o + per rendiment ja que el compilador crearà menys objectes
         StringBuilder textSensors = new StringBuilder();
         for (Sensor currentSensor : sensorList ) {
-            textSensors.append(currentSensor.getName()).append(
+            nSensors++;
+            textSensors.append(nSensors).append("-").append(currentSensor.getName()).append(
                     System.getProperty("line.separator")); //No depèn SO (\n Linux o \r\n Windows)
         }
 
