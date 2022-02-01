@@ -1,12 +1,10 @@
 package cat.dam.andy.sensordetect;
-
 import android.content.Context;
 import android.hardware.SensorManager;
 import android.hardware.Sensor;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import java.util.List;
 
 /**
